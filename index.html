@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skill Growth | Low Brass & Creative Media</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <!-- 1. Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1>My Skill Growth Journey</h1>
+            <p class="lead">Low Brass Instruments × Creative Media Design</p>
+            <a href="#timeline" class="btn btn-primary">Start the Journey</a>
+        </div>
+    </section>
+
+    <!-- 2. Timeline Section (with color switch buttons) -->
+    <section class="py-5" id="timeline">
+        <div class="container">
+            <h2 class="text-center mb-5">Skill Growth Timeline</h2>
+            <div class="timeline">
+                <!-- Stage 1: Enlightenment (Primary School) - Warm Apricot -->
+                <div class="timeline-item">
+                    <div class="timeline-node age-enlighten">
+                        <i class="bi bi-music-note-beamed"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Enlightenment: Music Introduction (Primary School)</h3>
+                        <p>First contact with music, attracted by the deep timbre of low brass instruments. Insisted on basic music theory learning every day, laying a solid foundation for future instrument learning.</p>
+                        <img src="images/stage1-child.jpg" class="img-fluid rounded shadow-sm mt-3" 
+                             data-bs-toggle="modal" data-bs-target="#modal-stage1" alt="Music enlightenment photo">
+                        <button class="btn mt-4 stage-color-btn" data-color="#F9D59B">
+                            Switch to Enlightenment Color: Warm Apricot
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stage 2: Precipitation (Junior High) - Light Lake Blue -->
+                <div class="timeline-item">
+                    <div class="timeline-node age-precipitate">
+                        <i class="bi bi-tuba"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Precipitation: Tuba Introduction (Junior High)</h3>
+                        <p>Officially started learning tuba, practiced every day and completed basic grading exams. Felt the core role of low brass instruments in ensemble for the first time, cultivating concentration and perseverance.</p>
+                        <img src="images/stage2-teen.jpg" class="img-fluid rounded shadow-sm mt-3" 
+                             data-bs-toggle="modal" data-bs-target="#modal-stage2" alt="Tuba learning photo">
+                        <button class="btn mt-4 stage-color-btn" data-color="#B4D8E7">
+                            Switch to Precipitation Color: Light Lake Blue
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stage 3: Bloom (Senior High) - Misty Blue Purple -->
+                <div class="timeline-item">
+                    <div class="timeline-node age-bloom">
+                        <i class="bi bi-violin"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Bloom: Double Bass Proficiency (Senior High)</h3>
+                        <p>Deepened double bass playing skills, participated in various performances and formed personal playing style. Began to combine musical perception with visual aesthetics, inspiring creative media ideas.</p>
+                        <img src="images/stage3-high.jpg" class="img-fluid rounded shadow-sm mt-3" 
+                             data-bs-toggle="modal" data-bs-target="#modal-stage3" alt="Double bass learning photo">
+                        <button class="btn mt-4 stage-color-btn" data-color="#86A8CF">
+                            Switch to Bloom Color: Misty Blue Purple
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stage 4: University - Light Purple Blue -->
+                <div class="timeline-item">
+                    <div class="timeline-node age-bloom">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>University: Cross-border Creation (Double Bass + Creative Media)</h3>
+                        <p>Deepened double bass skills and systematically improved playing level in spare time. Combined with creative media major, integrated the timbre aesthetics of low brass instruments into visual design and web creation, completing "music + design" cross-border practice.</p>
+                        <img src="images/stage4-university.jpg" class="img-fluid rounded shadow-sm mt-3" 
+                             data-bs-toggle="modal" data-bs-target="#modal-stage4" alt="University creation photo">
+                        <p class="text-muted mt-2" style="font-size: 0.9rem;">「Creative Media Practice: Low Brass Timbre Visualization Design / Music-themed Web Prototype Creation」</p>
+                        <button class="btn mt-4 stage-color-btn" data-color="#A0B8E0">
+                            Switch to University Color: Light Purple Blue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sound Wave Visualization -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Low Brass Timbre Visualization</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-warning" onclick="playWave('tuba')">Tuba Timbre</button>
+                        <button type="button" class="btn btn-primary" onclick="playWave('bass')">Double Bass Timbre</button>
+                        <button type="button" class="btn btn-secondary" onclick="stopWave()">Stop</button>
+                    </div>
+                    <p class="text-muted mt-2">Click buttons to view simulated sound waves of different low brass instruments</p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="wave-container">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Creative Media Works Gallery -->
+    <section class="py-5 bg-light" id="gallery">
+        <div class="container">
+            <h2 class="text-center mb-5">My Music + Design Works</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="gallery-container">
+                        <div class="gallery-item">
+                            <img src="images/work1-tuba-poster.jpg" class="gallery-thumb" alt="Tuba poster design">
+                            <div class="gallery-popup">
+                                <img src="images/work1-tuba-poster-big.jpg" class="img-fluid" alt="Tuba poster design">
+                                <p>Tuba Timbre Visualization Poster | Creative Media Course Work</p>
+                                <span class="badge bg-warning mt-2">Suitable for INFJ/ISFJ (Sensitive Perceivers)</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/work2-bass-website.jpg" class="gallery-thumb" alt="Double bass web prototype">
+                            <div class="gallery-popup">
+                                <img src="images/work2-bass-website-big.jpg" class="img-fluid" alt="Double bass web prototype">
+                                <p>Double Bass Themed Web Prototype | Web Design Practice</p>
+                                <span class="badge bg-primary mt-2">Suitable for ENTP/INTP (Creative Thinkers)</span>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/work3-sound-wave.jpg" class="gallery-thumb" alt="Sound wave design">
+                            <div class="gallery-popup">
+                                <img src="images/work3-sound-wave-big.jpg" class="img-fluid" alt="Sound wave design">
+                                <p>Low Brass Timbre Wave Visualization | Visual Design Practice</p>
+                                <span class="badge bg-secondary mt-2">Suitable for ISFP/ESFP (Artistic Types)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. My Future Color Section -->
+    <section class="py-6 bg-white text-center" id="future-color">
+        <div class="container">
+            <h2 class="mb-5 fw-bold" style="color: #333;">My Growth, Colored by UOWHK</h2>
+            <p class="text-muted mb-6 col-md-8 mx-auto">From warm apricot of enlightenment to misty blue purple of proficiency, my skill growth is ultimately rooted in <strong style="color: #005EA8;">UOWHK Blue</strong> - the color of my future, walking with UOWHK towards new horizons</p>
+            <button type="button" class="btn future-color-btn me-3" data-bs-toggle="modal" data-bs-target="#futureColorModal">
+                <i class="bi bi-palette-fill me-2"></i> My Future Color
+            </button>
+            <button class="btn btn-outline-secondary mt-4" onclick="resetBgColor()">
+                Reset Background Color
+            </button>
+        </div>
+    </section>
+
+    <!-- 6. Interest Selection -->
+    <section class="py-3 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h3 class="mb-4">Which of my skill areas interests you most?</h3>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <button class="btn btn-warning" onclick="showInterest('Double Bass Performance')">🎻 Double Bass Performance</button>
+                        <button class="btn btn-primary" onclick="showInterest('Creative Media Design')">🎨 Creative Media Design</button>
+                        <button class="btn btn-secondary" onclick="showInterest('Music + Design Cross-border Creation')">✨ Cross-border Creation</button>
+                    </div>
+                    <p class="text-success mt-3 d-none" id="interest-tip">Thank you for your choice～ Scroll down to unlock MBTI fun matching!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. MBTI Matching Module (Fixed Exclusive Logic) -->
+    <section class="py-5 bg-light" id="mbti-interact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4">My Skills × Your MBTI - Fun Matching</h2>
+                    <p class="text-muted mb-5">After browsing my low brass and creative media growth journey, try matching your exclusive fun results～</p>
+                    <!-- MBTI Dimensions (Exclusive Selection) -->
+                    <div class="mbti-dimensions mb-5">
+                        <!-- Dimension 1: I/E -->
+                        <div class="mbti-dimension mb-3">
+                            <h5>Dimension 1: Attitude Towards the World</h5>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn mbti-btn" data-dimension="IE" data-type="I">Introvert (I)</button>
+                                <button class="btn mbti-btn" data-dimension="IE" data-type="E">Extrovert (E)</button>
+                            </div>
+                        </div>
+                        <!-- Dimension 2: S/N -->
+                        <div class="mbti-dimension mb-3">
+                            <h5>Dimension 2: Way of Perceiving Information</h5>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn mbti-btn" data-dimension="SN" data-type="S">Sensing (S)</button>
+                                <button class="btn mbti-btn" data-dimension="SN" data-type="N">Intuition (N)</button>
+                            </div>
+                        </div>
+                        <!-- Dimension 3: T/F -->
+                        <div class="mbti-dimension mb-3">
+                            <h5>Dimension 3: Way of Making Decisions</h5>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn mbti-btn" data-dimension="TF" data-type="T">Thinking (T)</button>
+                                <button class="btn mbti-btn" data-dimension="TF" data-type="F">Feeling (F)</button>
+                            </div>
+                        </div>
+                        <!-- Dimension 4: J/P -->
+                        <div class="mbti-dimension mb-3">
+                            <h5>Dimension 4: Lifestyle Preference</h5>
+                            <div class="d-flex justify-content-center gap-3">
+                                <button class="btn mbti-btn" data-dimension="JP" data-type="J">Judging (J)</button>
+                                <button class="btn mbti-btn" data-dimension="JP" data-type="P">Perceiving (P)</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="small text-muted">Tip: Select one option for each of the four dimensions (e.g. INFJ), results will show automatically</p>
+                    
+                    <!-- MBTI Result (Instrument & Career Matching) -->
+                    <div class="mbti-result card border-0 shadow p-5 rounded-12 d-none">
+                        <h3 class="mb-3" id="mbti-title">Your MBTI × My Skills Matching Score💯</h3>
+                        <p class="lead mb-4" id="mbti-desc">Personalized matching results with exclusive instrument & career recommendations!</p>
+                        
+                        <!-- Instrument Matching -->
+                        <div class="mb-5">
+                            <h4>🎵 Recommended Low Brass Instrument For You</h4>
+                            <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap" id="instrument-match">
+                                <img src="" alt="Recommended instrument" id="instrument-img" style="width: 150px; height: 150px; object-fit: contain;">
+                                <p id="instrument-desc" class="text-left">Your MBTI traits perfectly match this low brass instrument - discover the unique charm of deep timbre!</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Career Matching -->
+                        <div>
+                            <h4>💼 Recommended Creative Career Path</h4>
+                            <div class="d-flex align-items-center justify-content-center gap-4 flex-wrap" id="career-match">
+                                <img src="" alt="Recommended career" id="career-img" style="width: 150px; height: 150px; object-fit: contain;">
+                                <p id="career-desc" class="text-left">Based on your MBTI, this creative career combines music & design - your ideal development direction!</p>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-outline-secondary mt-5" onclick="resetMbti()">Reset Matching</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage Modals -->
+    <div class="modal fade" id="modal-stage1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enlightenment: Music Introduction (Primary School)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/stage1-child-big.jpg" class="img-fluid" alt="Music enlightenment high-res photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-stage2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Precipitation: Tuba Introduction (Junior High)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/stage2-teen-big.jpg" class="img-fluid" alt="Tuba learning high-res photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-stage3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bloom: Double Bass Proficiency (Senior High)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/stage3-high-big.jpg" class="img-fluid" alt="Double bass learning high-res photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-stage4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">University: Cross-border Creation (Double Bass + Creative Media)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/stage4-university-big.jpg" class="img-fluid" alt="University creation high-res photo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Future Color Modal -->
+    <div class="modal fade" id="futureColorModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-md modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-body p-0">
+                    <div class="future-modal-inner d-flex flex-column md:flex-row align-items-center justify-content-center p-5" style="background-color: #f8f9fa; border-radius: 12px;">
+                        <div class="mb-4 md:mb-0 md:me-5">
+                            <img src="images/uowhk-logo.png" alt="UOWHK Logo" class="uowhk-logo" style="width: 150px; height: 150px; object-fit: contain;">
+                        </div>
+                        <div class="text-center md:text-left">
+                            <span class="future-color-text d-block mb-3" style="font-size: 4rem; font-weight: 700; color: #005EA8;">Blue</span>
+                            <p class="future-desc" style="color: #666; line-height: 1.8;">
+                                This is the exclusive color of University of Wollongong Hong Kong<br>
+                                The background color of my future skill growth<br>
+                                Based on Creative Media major, with low brass as wings<br>
+                                Walking with UOWHK, growing continuously in the shade of blue
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center pb-4">
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+</body>
+</html>
